@@ -10,8 +10,10 @@ def string_to_list(input_string):
     new_list = []
     temp_item = ""
 
+    # Checks each character in input string for >.
     for i in range(len(input_string)):
         
+        # If > exists, program inserts temp_item to new list and erases it.
         if input_string[i] != ">":
             temp_item += input_string[i]
 
@@ -19,6 +21,7 @@ def string_to_list(input_string):
             new_list += [temp_item]
             temp_item = ""
 
+    # If there is remaining characters in tempt_item, it will insert it.
     if len(temp_item) > 0:
         new_list += [temp_item]
 

@@ -24,7 +24,7 @@ def word_jumble(input_word):
 def main():
     '''main logic'''
 
-    word_list= ["there", "which", "their"]
+    word_list= ["whooper", "nuggets", "chicken"]
 
     # Keeps repeating until there are no words remaining in words list.
     while True:

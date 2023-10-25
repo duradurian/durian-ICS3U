@@ -25,3 +25,5 @@ def main():
 
     # Output results
     print("The date is:", expand_date(input_date))
+
+main()

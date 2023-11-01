@@ -122,7 +122,6 @@ def main():
     ttt_board = [[" ", " ", " "],[" ", " ", " "],[" ", " ", " "]]
     
     while True:
-        print(free_cells)
         
         display_board(ttt_board)
         if users_turn:

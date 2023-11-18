@@ -24,8 +24,3 @@ class Teacher:
     def __str__(self):
         "This method returns a string indicating the object's state."
         return self.__name + " is " + self.__mood
-def main():
-    huynh = Teacher()
-    
-    print(Teacher.__str__())
-main()

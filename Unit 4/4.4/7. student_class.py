@@ -69,5 +69,6 @@ def main():
     print("Telephone:", student_instance.get_telephone())
     print("Has cellphone:", student_instance.is_cellphone())
     
+    
 
 main()

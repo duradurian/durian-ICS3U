@@ -16,12 +16,12 @@ pygame.display.set_caption("move a box")
 # Entities
 background = pygame.Surface(screen.get_size())
 background = background.convert()
-background.fill((100, 50, 0)) 
+background.fill((255, 255, 255)) 
 
 # make a red 25 x 25 box
 box = pygame.Surface((25, 25))
 box = box.convert()
-box.fill((0, 255, 0))
+box.fill((255, 100, 100))
 
 # set up some box variables
 box_x = 0

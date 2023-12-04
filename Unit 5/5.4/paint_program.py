@@ -1,10 +1,7 @@
 """
-Add the following features to this paint program:
-b. Add events for the keys '1' through '9' such that they set the line width to that many pixels.
-c. Add an event for the 's' (save) key that will cause the current picture to be held in the current
-directory with the filename painting.bmp.
-d. Add an event for the 'l' (load) key that will cause the painting.bmp file to be loaded and
-displayed in the window.
+Author: Darrien Guan
+Date: December 1, 2023
+Disc: Modified code from paint program example. Added additional features such as loading, and other coloured lines.
 """
 
 # I - Import and Initialize

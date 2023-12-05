@@ -19,7 +19,7 @@ def main():
     '''This function defines the 'mainline logic' for our paint program.'''
     # D - Display configuration
     screen = pygame.display.set_mode((640, 480))
-    pygame.display.set_caption("Paint: (w)hite, blac(k), (c)lear, (q)uit")
+    pygame.display.set_caption("Paint: (w)hite, blac(k), (c)lear, (b)lue, g(reen), (r)ed, (l)oad , (s)ave (q)uit, 1-9 for width")
 
     # E - Entities
     background = pygame.Surface(screen.get_size())
@@ -33,10 +33,16 @@ def main():
     drawColor = (0, 0, 0)
     lineWidth = 3
 
+    # Load image
+    portrait = pygame.image.load("painting.bmp").convert
+    
+    load_save_image = False
+
     # L - Loop
     while keepGoing:
+
         # T - Timer to set frame rate
-        clock.tick(30)
+        clock.tick(120) # 120 fps cause my computer has a 120hz display.
 
         # E - Event handling
         for event in pygame.event.get():
@@ -79,11 +85,24 @@ def main():
                 elif event.key == pygame.K_s:
                     pygame.image.save(background, "painting.bmp")
 
+                elif event.key == pygame.K_l:
+                    # Load image
+                    portrait = pygame.image.load("painting.bmp").convert()
+                    load_save_image = not load_save_image
+
+                elif event.key >= 49 and event.key <= 57:
+                    # Set line width of event.key 50 to 57.
+                    lineWidth = event.key - 48
+
 
         # R - Refresh display
         screen.blit(background, (0, 0))
         myLabel = statusSurface(drawColor, lineWidth)
-        screen.blit(myLabel, (450, 450))
+        screen.blit(myLabel, (300, 450))
+
+        if load_save_image == True:
+            screen.blit(portrait, (0, 0))
+
         pygame.display.flip()
 
     # Close the game window

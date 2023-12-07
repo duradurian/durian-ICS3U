@@ -4,7 +4,8 @@ Date: Dec 5
 Disc: Circle sprite with colour parameter.
 """
 
-import pygame, random
+import pygame
+import random
 
 class Circle(pygame.sprite.Sprite):
     '''Our Circle class inherits from the Sprite class'''
